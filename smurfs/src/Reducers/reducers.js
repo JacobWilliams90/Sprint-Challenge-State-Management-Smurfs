@@ -1,3 +1,5 @@
+import { GET_SMURFS, SEE_SMURFS, ERR_SMURFS, ADD_SMURFS } from '../Actions/actions'
+
 const initialState = {
   smurfs: [],
   isLoading: false,
@@ -23,7 +25,7 @@ export const reducer = (state = initialState, action) => {
         isLoading: false,
         error: action.payload.error
       };
-    case ADD_SMURF:
+    case ADD_SMURFS:
       return {
         ...state,
         smurfs: action.payload.data
